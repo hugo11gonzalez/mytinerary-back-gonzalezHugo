@@ -4,7 +4,7 @@ const getClients = async (req, res)=> {
 
 
     try{
-        let clients = await Client.find()
+        let clients = await Client.find().populate('accounts')
     res.status(200).json({
         clients
     })

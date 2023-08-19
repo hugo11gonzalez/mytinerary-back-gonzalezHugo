@@ -13,7 +13,11 @@ const schemaClient = new Schema({
         type : Number,
         default:'0',
         required:[true,'Age is Required']
-    }
+    },
+    accounts:[{
+        type:Types.ObjectId,
+        ref:"Account"
+    }]
 })
 
 const Client = model("Client", schemaClient)

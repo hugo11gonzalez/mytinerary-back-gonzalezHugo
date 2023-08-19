@@ -6,6 +6,8 @@ const {getClient, getClients, addClient, deleteClient} = require ('../controller
 
 const {verifyDataClient} = require('../middlewares/verifications');
 
+const {addAccount} = require("../controller/accountsController")
+
 router.get("/clients", getClients)
 
 router.get("/clients/:id", getClient)
@@ -13,5 +15,8 @@ router.get("/clients/:id", getClient)
 router.post("/clients", verifyDataClient, addClient)
 
 router.delete("/clients", deleteClient)
+
+router.post("/accounts",addAccount)
+
 
 module.exports = router
