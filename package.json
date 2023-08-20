@@ -1,18 +1,14 @@
 {
-  "name": "mytinerary-back-gonzalezhugo",
+  "name": "mindflix-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": " nodemon ./src/app.js"
+    "start": "node app.js",
+    "dev": "modemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.4.3",
-    "nodemon": "^3.0.1"
-  },
-  "description": ""
+  "license": "ISC"
 }
