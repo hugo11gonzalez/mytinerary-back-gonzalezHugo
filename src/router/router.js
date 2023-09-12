@@ -19,4 +19,11 @@ router.delete("/clients", deleteClient)
 router.post("/accounts",addAccount)
 
 
+
 module.exports = router
+
+/*  
+    .post() enviar datos para crear
+    .put() debo actualizar todos los datos
+    .patch() solo actualizo el dato que nos interesa
+*/
