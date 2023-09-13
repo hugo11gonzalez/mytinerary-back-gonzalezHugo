@@ -57,6 +57,7 @@ const deleteCity = async (req, res) => {
 }
 const updateCity = async (req, res) => {
     try {
+        //                           Pasamos por parametro en la url 
         let {id, name, foto, pais} = req.query
         
         await City.findByIdAndUpdate (id,{name:name, foto:foto, pais:pais} ) 
