@@ -2,21 +2,21 @@ const express = require("express")
 
 const router = express.Router()
 
-const {getClient, getClients, addClient, deleteClient} = require ('../controller/clientsController')
+const {getCities, getCity, addCity, deleteCity} = require ('../controller/cityController')
 
-const {verifyDataClient} = require('../middlewares/verifications');
+const {verifyDataCity,verifyDataItinerary} = require('../middlewares/verifications');
 
-const {addAccount} = require("../controller/accountsController")
+const {addItinerary} = require("../controller/itineraryController")
 
-router.get("/clients", getClients)
+router.get("/cities", getCities)
 
-router.get("/clients/:id", getClient)
+router.get("/cities/:id", getCity)
 
-router.post("/clients", verifyDataClient, addClient)
+router.post("/cities", verifyDataCity, addCity)
 
-router.delete("/clients", deleteClient)
+router.delete("/cities", deleteCity)
 
-router.post("/accounts",addAccount)
+router.post("/itinerary",verifyDataItinerary, addItinerary)
 
 
 
