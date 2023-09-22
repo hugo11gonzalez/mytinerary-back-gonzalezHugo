@@ -26,7 +26,17 @@ const getCity = async (req, res)=> {
         res.status(500).json({message: error})
     }
 }
+const getCityName = async (req, res)=> {
 
+    try {
+        let {name} = req.body
+        console.log("Entro el getCityName" + name);
+        let cityEncontrada= await City.findOne({name: name})
+        res.status(200).json(cityEncontrada)
+    } catch (error) {
+        res.status(500).json({message: error})
+    }
+}
 const addCity = async (req, res) => {
     try {
         let payload = req.body
@@ -74,6 +84,7 @@ const updateCity = async (req, res) => {
 module.exports = {
     getCities,
     getCity,
+    getCityName,
     addCity,
     deleteCity,
     updateCity
